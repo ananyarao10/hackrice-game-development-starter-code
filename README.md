@@ -1,13 +1,4 @@
-<style>
-/* This CSS is for rendering in markdown viewers that support HTML/CSS styling */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-    font-family: 'Roboto', sans-serif;
-}
-</style>
-
-# 🎮 **Starter Code for Beginners Game Development Track using Pygame**
+# 🎮 **Starter Code for Game Development Track using Pygame**
 
 This repo provides a basic framework for developing 2D games using Pygame. It's designed to help beginners quickly get started with creating their own game using the Python library Pygame for the beginners game development track!
 
