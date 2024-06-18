@@ -4,13 +4,10 @@ import sys
 # initialize all imported pygame modules
 pygame.init()
 
-# set the screen dimensions and other game variables
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600 
-
 # initialize a screen w/ correct dimensions for display
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-# set the current screeb caption
+screen = pygame.display.set_mode((800, 600))
+
+# set the current screen caption
 pygame.display.set_caption('Game Loop Example')
 
 # create an object to help track time
@@ -26,8 +23,8 @@ while running:
 
     # add game logic here 
 
-    # clear the screen
-    screen.fill(BG_COLOR)
+    # clear the screen (make it black)
+    screen.fill((0,0,0))
 
     # draw everything on the screen
 
