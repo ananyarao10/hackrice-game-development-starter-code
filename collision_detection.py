@@ -4,34 +4,31 @@ import sys
 # initialize all imported pygame modules
 pygame.init()
 
-# set the screen dimensions and other game variables
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600 
+# define important game variables
 PLAYER_SIZE = 50
 ENEMY_SIZE = 50
 PLAYER_SPEED = 5
 
 # initialize a screen w/ correct dimensions for display
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-# set the current screeb caption
+screen = pygame.display.set_mode((800, 600))
+
+# set the current screen caption
 pygame.display.set_caption('Collision Detection Example')
 
 # define the player's x-coordinate initial position
-player_x = SCREEN_WIDTH // 2
+player_x = 800 // 2
 # define the player's y-coordinate initial position
-player_y = SCREEN_HEIGHT // 2
+player_y = 600 // 2
 
 # define the enemy's x-coordinate initial position
 enemy_x = 300
 # define the enemy's y-coordinate initial position
 enemy_y = 300
 
-# set the font and font size
-font = pygame.font.Font(None, 36)
-
 # create an object to help track time
 clock = pygame.time.Clock()
 running = True
+
 while running:
   # iterate through each event in the game's event queue
     for event in pygame.event.get():
@@ -57,7 +54,7 @@ while running:
 
     # ensure player's x-coordinate stays within screen dimension
     player_x = max(0, min(SCREEN_WIDTH - PLAYER_SIZE, player_x))
-  # ensure player's y-coordinate stays within screen dimension
+    # ensure player's y-coordinate stays within screen dimension
     player_y = max(0, min(SCREEN_HEIGHT - PLAYER_SIZE, player_y))
 
     # create a rectangle positioned at (player_x, player_y) with a width and height of PLAYER_SIZE
