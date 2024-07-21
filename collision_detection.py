@@ -1,28 +1,34 @@
+# import necessary modules
 import pygame
 import sys
 
 # initialize all imported pygame modules
 pygame.init()
 
-# define important game variables
-PLAYER_SIZE = 50
-ENEMY_SIZE = 50
-PLAYER_SPEED = 5
+# define game variables
+player_size = 50
+enemy_size = 50
+player_speed = 5
+width = 800
+height = 600
 
-# initialize a screen w/ correct dimensions for display
-screen = pygame.display.set_mode((800, 600))
+# initialize the font variable for the game
+font = pygame.font.Font(None, 36)
+
+# initialize screen display with width and height 
+screen = pygame.display.set_mode((width, height))
 
 # set the current screen caption
 pygame.display.set_caption('Collision Detection Example')
 
-# define the player's x-coordinate initial position
-player_x = 800 // 2
-# define the player's y-coordinate initial position
-player_y = 600 // 2
+# define player's x-coordinate for initial position
+player_x = width // 2
+# define player's y-coordinate for initial position
+player_y = height // 2
 
-# define the enemy's x-coordinate initial position
+# define enemy's x-coordinate for initial position
 enemy_x = 300
-# define the enemy's y-coordinate initial position
+# define enemy's y-coordinate for initial position
 enemy_y = 300
 
 # create an object to help track time
@@ -41,26 +47,26 @@ while running:
 
     # decrement player's x-coordinate based on num times left arrow key pressed
     if keys[pygame.K_LEFT]:
-        player_x -= PLAYER_SPEED
+        player_x -= player_speed
     # increment player's x-coordinate based on num times right arrow key pressed
     if keys[pygame.K_RIGHT]:
-        player_x += PLAYER_SPEED
+        player_x += player_speed
     # decrement player's y-coordinate based on num times up arrow key pressed
     if keys[pygame.K_UP]:
-        player_y -= PLAYER_SPEED
+        player_y -= player_speed
     # increment player's y-coordinate based on num times down arrow key pressed
     if keys[pygame.K_DOWN]:
-        player_y += PLAYER_SPEED
+        player_y += player_speed
 
     # ensure player's x-coordinate stays within screen dimension
-    player_x = max(0, min(SCREEN_WIDTH - PLAYER_SIZE, player_x))
+    player_x = max(0, min(width - player_size, player_x))
     # ensure player's y-coordinate stays within screen dimension
-    player_y = max(0, min(SCREEN_HEIGHT - PLAYER_SIZE, player_y))
+    player_y = max(0, min(height - player_size, player_y))
 
     # create a rectangle positioned at (player_x, player_y) with a width and height of PLAYER_SIZE
-    player_rect = pygame.Rect(player_x, player_y, PLAYER_SIZE, PLAYER_SIZE)
+    player_rect = pygame.Rect(player_x, player_y, player_size, player_size)
     # create a rectangle positioned at (enemy_x, enemy_y) with a width and height of ENEMY_SIZE
-    enemy_rect = pygame.Rect(enemy_x, enemy_y, ENEMY_SIZE, ENEMY_SIZE)
+    enemy_rect = pygame.Rect(enemy_x, enemy_y, enemy_size, enemy_size)
 
     # check if player's rectangle intersects with enemy's rectangle (indicating a collision)
     collision = player_rect.colliderect(enemy_rect)
@@ -76,7 +82,7 @@ while running:
 
     # display collision message if the player and enemy rectangles intersect/overlap
     if collision:
-        text = font.render('Collision!', True, (255, 255, 255))
+        text = font.render('Collision Occurred!', True, (255, 255, 255))
         screen.blit(text, (10, 10))
 
     # update the screen display
