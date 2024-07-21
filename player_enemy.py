@@ -1,99 +1,76 @@
+# import necessary modules
 import pygame
 import sys
 
-# Initialize Pygame
-pygame.init()
+# define game variables
+width = 800
+height = 600
+player_speed = 5
 
-# Constants numbers (Macros)
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
-FPS = 60
-PLAYER_SPEED = 5
+# initialize screen display with width and height 
+screen = pygame.display.set_mode((width, height))
 
-# Colors
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+# set the current screen caption
+pygame.display.set_caption("Player character behavior")
 
-# Screen setup
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Player Character Behavior")
+# create an object to help track time
 clock = pygame.time.Clock()
 
+# player setup
+player_image = pygame.Surface((50, 50))
+player_image.fill((255,255,255))
+player_rect = player_image.get_rect()
+player_rect.center = (width // 2, height // 2)
 
-#-------------------------------------------------------------------
-# What is pygame.sprite and why we use the Sprite class within it?
-# pygame.sprite.Sprite is a base class in the pygame.sprite module
-# that represents a game object, or sprite, in Pygame. It provides 
-# a convenient way to handle game objects by allowing them to be 
-# grouped, updated, and drawn together. 
-#-------------------------------------------------------------------
-# Player class
-class Player(pygame.sprite.Sprite): # Here, the Player class is essentially inherited from the Sprite base class from pygame
-    def __init__(self, x, y):
-        # Call the parent class (Sprite) constructor
-        super().__init__()
-        self.image = pygame.Surface((50, 50))
-        self.image.fill(WHITE)
-        self.rect = self.image.get_rect()
-        self.rect.center = (x, y)
-        self.speed_x = 0
-        self.speed_y = 0
+def update_player_position():
+    keys = pygame.key.get_pressed()
+    
+    # define speed variables
+    speed_x = 0
+    speed_y = 0
+    
+    if keys[pygame.K_LEFT]:
+        speed_x = -player_speed
+    if keys[pygame.K_RIGHT]:
+        speed_x = player_speed
+    if keys[pygame.K_UP]:
+        speed_y = -player_speed
+    if keys[pygame.K_DOWN]:
+        speed_y = player_speed
+    
+    # update player's position
+    player_rect.x += speed_x
+    player_rect.y += speed_y
+    
+    # ensure player stays on screen
+    if player_rect.left < 0:
+        player_rect.left = 0
+    if player_rect.right > width:
+        player_rect.right = width
+    if player_rect.top < 0:
+        player_rect.top = 0
+    if player_rect.bottom > height:
+        player_rect.bottom = height
 
-    def update(self):
-        keys = pygame.key.get_pressed()
-        
-        # Reset speed
-        self.speed_x = 0
-        self.speed_y = 0
-        
-        if keys[pygame.K_LEFT]:
-            self.speed_x = -PLAYER_SPEED
-        if keys[pygame.K_RIGHT]:
-            self.speed_x = PLAYER_SPEED
-        if keys[pygame.K_UP]:
-            self.speed_y = -PLAYER_SPEED
-        if keys[pygame.K_DOWN]:
-            self.speed_y = PLAYER_SPEED
-        
-        # Update player position
-        self.rect.x += self.speed_x
-        self.rect.y += self.speed_y
-        
-        # Keep player on screen
-        if self.rect.left < 0:
-            self.rect.left = 0
-        if self.rect.right > SCREEN_WIDTH:
-            self.rect.right = SCREEN_WIDTH
-        if self.rect.top < 0:
-            self.rect.top = 0
-        if self.rect.bottom > SCREEN_HEIGHT:
-            self.rect.bottom = SCREEN_HEIGHT
-
-# Initialize player
-player = Player(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
-all_sprites = pygame.sprite.Group()
-all_sprites.add(player)
-
-# Main game loop
+# main game loop
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    # Update
-    all_sprites.update()
+    update_player_position()
     
-    # Draw
-    screen.fill(BLACK)
-    all_sprites.draw(screen)
+    # draw
+    screen.fill((0,0,0))
+    screen.blit(player_image, player_rect)
     
-    # Flip the display
+    # update the screen display
     pygame.display.flip()
-    
-    # Ensure program maintains a rate of FPS frames per second
-    clock.tick(FPS)
 
-# Clean up
+    # set limit on num of frames per second that game will render (cap the frame rate)
+    clock.tick(60)
+
+# quit Pygame
 pygame.quit()
 sys.exit()
