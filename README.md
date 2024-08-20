@@ -40,8 +40,8 @@ This repository provides the foundational code for creating a simple 2D game wit
 
 2. Install the required dependencies:
 
-    ```bash
-    pip install -r requirements.txt
+   ```bash
+    pip install pygame
     ```
 
 ## 📂 **File Descriptions**
