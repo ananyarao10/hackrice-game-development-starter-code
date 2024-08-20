@@ -34,7 +34,7 @@ This repository provides the foundational code for creating a simple 2D game wit
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/pygame-starter.git
+    git clone https://github.com/ananyarao10/hackrice-game-development-starter-code.git
     cd pygame-starter
     ```
 
