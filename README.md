@@ -20,7 +20,7 @@ Before you begin, ensure that your system meets the following requirements:
    
 3. **Pygame Library**:This project requires the Pygame library, which will be installed during the setup process.
 
-### 🔧 **Set Up**
+### 🔧 **Setup**
 
 1. IDE setup: Some popular options include Visual Studio Code (VS Code) and PyCharm.
    
