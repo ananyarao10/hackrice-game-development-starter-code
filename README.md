@@ -36,7 +36,7 @@ After installing your chosen IDE or editor, ensure that it's properly configured
     
 3. Navigate into the project directory:
    ```bash
-    cd pygame-starter
+    cd hackrice-game-development-starter-code
     ```
 
 4. Install the required dependencies:
