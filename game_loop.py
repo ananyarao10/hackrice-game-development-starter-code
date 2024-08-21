@@ -21,12 +21,14 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    # add game logic here 
+    # ADD YOUR OWN CODE FOR GAME LOGIC HERE
+    # EXAMPLE: MOVING OBJECTS, COLLISION DETECTION, ETC. 
 
     # clear the screen (make it black)
     screen.fill((0,0,0))
 
-    # draw everything on the screen
+    # ADD YOUR OWN CODE TO DRAW EVERYTHING ON THE SCREEN HERE
+    # EXAMPLE: screen.blit(your_surface, (x, y)) FOR DISPLAYING IMAGES
 
     # update the screen display
     pygame.display.flip()
