@@ -1,7 +1,5 @@
 # 🎮 **Starter Code for Game Development Track using Pygame**
 
-This repo provides a basic framework for developing 2D games using Pygame. It's designed to help beginners quickly get started with creating their own game using the Python library Pygame for the beginners game development track!
-
 ## 🎯 **Introduction**
 
 This repository provides the foundational code for creating a simple 2D game with Pygame. It includes essential components like game loops, collision detection, player and enemy handling, image rendering, addition of sound, and user interface elements. Use this starter code as a launchpad for your project and build upon it to create your own unique game!
@@ -18,7 +16,7 @@ Before you begin, ensure that your system meets the following requirements:
    ```
    If Python is not installed, download and install it from the official Python website: [https://www.python.org/downloads/](https://www.python.org/downloads/)
    
-3. **Pygame Library**:This project requires the Pygame library, which will be installed during the setup process.
+3. **Pygame Library**: This project requires the Pygame library, which will be installed during the setup process.
 
 ### 🔧 **Setup**
 
@@ -97,6 +95,6 @@ Creating main.py:
 - Incorporate new game mechanics, such as power-ups or level progression
 - Modify how health bars, score counters, and other indicators are displayed and updated
 - Design start screens, pause menus, and game-over screens
-- Implement a save and load feature that allows players to save their progress and resume from where they left off
+- Implement a save and load feature that allows players to save their progress and resume the game
 
 By exploring different ways to level up your game, you can create a more engaging and dynamic experience for players. Use these suggestions as a starting point to experiment and build upon the features in your game and don't forget to have fun!
