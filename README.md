@@ -53,11 +53,11 @@ Each file in this project is designed to showcase a specific feature of Pygame. 
 
 ### 💥 **collision_detection.py**
 
-This file is responsible for the functionality related to detecting and managing collisions between different game objects, such as the player, enemies, and obstacles. It ensures that the game responds appropriately when objects interact with each other, such as triggering events when the player collides with an enemy.
+This file is responsible for the functionality related to detecting and managing collisions between different game objects, such as the player, enemies, and obstacles. It ensures that the game responds appropriately when objects interact with each other.
 
 ### 🏃 **player_enemy.py**
 
-This file sets up a simple Pygame environment for player character movement within a defined screen space. It initializes the game window, creates a player character, and handles basic player input to move the character around the screen using the arrow keys. The script also ensures the player stays within the screen boundaries and includes a main game loop that continuously updates the player’s position and renders the game visuals at a capped frame rate.
+This file sets up a simple Pygame environment for player character movement within a defined screen space. It initializes the game window, creates a player character, and handles basic player input to move the character around the screen. 
 
 ### 🔄 **game_loop.py**
 
@@ -65,15 +65,15 @@ This file contains the main game loop which is the core functionality of any gam
 
 ### 🖼️ **image.py**
 
-This file is responsible for the functionality of loading, managing, and rendering images and sprites in the game. It ensures that all visual assets, like characters, backgrounds, and items, are correctly displayed and optimized for performance.
+This file is responsible for the functionality of loading, managing, and rendering images and sprites in the game. 
 
 ### 🎵 **sound.py**
 
-This file is responsiblef for the functionality that manages all audio aspects of the game, including sound effects and background music. It loads, plays, and controls the volume of different sounds, enhancing the game atmosphere and providing auditory feedback to player actions and events.
+This file is responsible for the functionality that manages all audio aspects of the game, including sound effects and background music. It loads, plays, and controls the volume of different sounds.
 
 ### 🖥️ **ui.py**
 
-This file is responsible for the game's user interface (UI) elements. It manages the display and updates of health bars, score counters, menus, and other visual indicators that help the player navigate and understand the game. It ensures that the UI is intuitive, responsive, and seamlessly integrated with the gameplay.
+This file is responsible for the game's user interface (UI) elements. It manages the display and updates of health bars, score counters, menus, and other visual indicators that help the player navigate and understand the game. 
 
 ## 📖 **Usage**
 
