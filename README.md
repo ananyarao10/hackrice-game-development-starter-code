@@ -18,6 +18,8 @@ Before you begin, ensure that your system meets the following requirements:
    
 3. **Pygame Library**: This project requires the Pygame library, which will be installed during the setup process.
 
+   Link to Pygame documentation: [https://www.pygame.org/docs/](https://www.pygame.org/docs/)
+
 ### 🔧 **Setup**
 
 1. IDE setup: Some popular options include Visual Studio Code (VS Code) and PyCharm.
@@ -41,6 +43,7 @@ After installing your chosen IDE or editor, ensure that it's properly configured
 
    ```bash
     pip install pygame
+    pip install pygame_ui
     ```
 
 After completing these steps, you're ready to start developing your game!
@@ -55,7 +58,7 @@ This file is responsible for the functionality related to detecting and managing
 
 ### 🏃 **player_enemy.py**
 
-This file sets up a simple Pygame environment for player character movement within a defined screen space. It initializes the game window, creates a player character, and handles basic player input to move the character around the screen. 
+This file sets up a simple Pygame environment for player character movement within a defined screen space. It initializes the game window, creates a player character, and handles basic player input to move the character around the screen. Note that this file uses the game loop.
 
 ### 🔄 **game_loop.py**
 
