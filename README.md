@@ -1,4 +1,4 @@
-# 🎮 **Starter Code for Game Development Track using Pygame**
+# 🎮 **Game Development Track Starter Code**
 
 ## 🎯 **Introduction**
 
