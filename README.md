@@ -1,12 +1,12 @@
-# 🎮 **Game Development Track Starter Code**
+# 🎮 **Game Development Track Starter Code** 🎮
 
-## 🎯 **Introduction**
+## 🎯 **Introduction** 🎯
 
 This repository provides the foundational code for creating a simple 2D game with Pygame. It includes essential components like game loops, collision detection, player and enemy handling, image rendering, addition of sound, and user interface elements. Use this starter code as a launchpad for your project and build upon it to create your own unique game!
 
-## 🚀 **Getting Started**
+## 🚀 **Getting Started** 🚀
 
-### 📦 **Prerequisites**
+### 📦 **Prerequisites** 📦
 
 Before you begin, ensure that your system meets the following requirements:
 
@@ -48,35 +48,35 @@ After installing your chosen IDE or editor, ensure that it's properly configured
 
 After completing these steps, you're ready to start developing your game!
 
-## 📂 **File Descriptions**
+## 📂 **File Descriptions** 📂
 
 Each file in this project is designed to showcase a specific feature of Pygame. Here’s a brief overview of each one:
 
-### 💥 **collision_detection.py**
+### 💥 **collision_detection.py** 💥
 
 This file is responsible for the functionality related to detecting and managing collisions between different game objects, such as the player, enemies, and obstacles. It ensures that the game responds appropriately when objects interact with each other.
 
-### 🏃 **player_enemy.py**
+### 🏃 **player_enemy.py** 🏃
 
 This file sets up a simple Pygame environment for player character movement within a defined screen space. It initializes the game window, creates a player character, and handles basic player input to move the character around the screen. Note that this file uses the game loop.
 
-### 🔄 **game_loop.py**
+### 🔄 **game_loop.py** 🔄
 
 This file contains the main game loop which is the core functionality of any game. It handles the overall flow of the game, including initializing game components, processing player input and events, updating game logic (like movement and collisions), and rendering the game visuals on the screen. 
 
-### 🖼️ **image.py**
+### 🖼️ **image.py** 🖼️
 
 This file is responsible for the functionality of loading, managing, and rendering images and sprites in the game. 
 
-### 🎵 **sound.py**
+### 🎵 **sound.py** 🎵
 
 This file is responsible for the functionality that manages all audio aspects of the game, including sound effects and background music. It loads, plays, and controls the volume of different sounds.
 
-### 🖥️ **ui.py**
+### 🖥️ **ui.py** 🖥️
 
 This file is responsible for the game's user interface (UI) elements. It manages the display and updates of health bars, score counters, menus, and other visual indicators that help the player navigate and understand the game. 
 
-## 📖 **Usage**
+## 📖 **Usage** 📖
 
 Plan Your Game Concept: Before diving into the code, decide on the type of game you want to create and consider what the player is trying to achieve, what players/enemies/objects will be in the game, and what are the rules of the game.
 
@@ -91,7 +91,7 @@ Creating main.py:
 - Adapt the game loop from game_loop.py to include event handling, game updates, and rendering.
 - Test the combined functionality to ensure everything works together seamlessly. Adjust and debug as needed to create a cohesive game experience.
 
-## 🧑‍🎨 **Ways to get creative**
+## 🧑‍🎨 **Ways to get creative** 🧑‍🎨
 
 - The current file uses arrow keys for movement, you can modify this to use other keys or add new actions (could also add a way to switch between different weapons or tools)
 - The player loses health when colliding with an enemy
