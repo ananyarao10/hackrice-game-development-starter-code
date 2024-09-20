@@ -101,3 +101,10 @@ Creating main.py:
 - Implement a save and load feature that allows players to save their progress and resume the game
 
 By exploring different ways to level up your game, you can create a more engaging and dynamic experience for players. Use these suggestions as a starting point to experiment and build upon the features in your game and don't forget to have fun!
+
+## ❓ **Questions?** ❓
+
+If you have any questions about using the starter code or any of the tracks here is the contact info of the tracks & workshops committee:
+- Ananya Rao (ar156@rice.edu)
+- Hannah Watkins (hw76@rice.edu)
+- Xinze Feng (xf15@rice.edu)
